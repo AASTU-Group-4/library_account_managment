@@ -1,6 +1,5 @@
 #include "header.h"
 
-
 void search()
 {
     int choice;

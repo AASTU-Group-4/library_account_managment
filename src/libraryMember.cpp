@@ -40,10 +40,8 @@ void library_member()
                 search();
                 break;
             case 4:
-                {
-                    system("clear");
-                    res.dispaly_all();
-                }
+                system("clear");
+                res.dispaly_all();
                 break;
             case 5:
                 exit(0);
