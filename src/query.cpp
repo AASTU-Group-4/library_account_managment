@@ -1,6 +1,5 @@
 #include "header.h"
 
-
 connection_details detail;
 
 result perform_query(string sql_query)
@@ -27,7 +26,7 @@ result perform_query(string sql_query)
     }
 
     res= mysql_store_result(connection);
-    if (res != nullptr) 
+    if (res != nullptr)
     {
         temp_result.num_colum = mysql_num_fields(res);
         temp_result.num_row = mysql_num_rows(res);
@@ -38,11 +37,11 @@ result perform_query(string sql_query)
             temp_result.column.push_back(fields[i].name);
             temp_result.columntype.push_back(fields[i].type);
         }
-        
-        while ((row = mysql_fetch_row(res)) != NULL) 
+
+        while ((row = mysql_fetch_row(res)) != NULL)
         {
             vector<string> row_data;
-            for (int i = 0; i <temp_result.num_colum; i++) 
+            for (int i = 0; i <temp_result.num_colum; i++)
             {
                 if (row[i] != NULL)
                     row_data.push_back(row[i]);

@@ -10,11 +10,11 @@ void search_by_isbn()
 
         if(cin >> ISBN)
         {
-            system("clear");
+            system("cls");
             if (ISBN > 0)
             {
                 result res2= perform_query("CALL search_books_by_ISBN(\"" + to_string(ISBN) + "\")");
-                res2.dispaly_all();                      
+                res2.dispaly_all();
                 break;
             }
             else if(ISBN==0)
@@ -23,14 +23,14 @@ void search_by_isbn()
             }
             else
             {
-                system("clear");
+                system("cls");
                 cout << "Invalid Choice" << endl;
             }
-            
+
         }
         else
         {
-            system("clear");
+            system("cls");
             cout << "Invalid Input" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');

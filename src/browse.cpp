@@ -6,7 +6,7 @@ void browse(libraryMember libmem)
     int choice;
     do
     {
-        system("clear");
+        system("cls");
         cout << "Browse by:" <<endl;
         cout << "1. History" << endl;
         cout << "2. Genre" << endl;
@@ -15,11 +15,11 @@ void browse(libraryMember libmem)
         cout << "0. Back" << endl;
         if(cin >> choice)
         {
-            system("clear");
+            system("cls");
             if (choice==1)
             {
                 result res= perform_query("CALL get_history(" + libmem.id + ")" );
-                res.dispaly_all();    
+                res.dispaly_all();
             }
             else if(choice ==2)
             {
@@ -32,28 +32,28 @@ void browse(libraryMember libmem)
             else if(choice ==4)
             {
                 result res=perform_query("CALL all_book()");
-                res.dispaly_all();      
-                break; 
-            }   
+                res.dispaly_all();
+                break;
+            }
             else if(choice ==0)
             {
                 break;
-            }    
+            }
             else
             {
-                system("clear");
+                system("cls");
                 cout << "Invalid Choice" << endl;
-            }     
-            
+            }
+
         }
         else
         {
-            system("clear");
+            system("cls");
             cout << "Invalid Input" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
-        
+
     } while (true);
-  
+
 }

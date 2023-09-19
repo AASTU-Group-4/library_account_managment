@@ -6,7 +6,7 @@ void library_member()
     int choice;
     libraryMember user;
     user.id = get_id("SELECT check_librarymember_id(");
-    
+
     result res= perform_query("CALL GetLibraryMember("+ user.id + ")");
 
     user.first_name=res.row[0][1];
@@ -14,7 +14,7 @@ void library_member()
 
     while (true)
     {
-        system("clear");
+        system("cls");
         cout << "Loged in as:" << endl;
         cout << "Fist name : " <<  user.first_name << endl;
         cout << "last name : " <<  user.last_name << endl;
@@ -28,25 +28,25 @@ void library_member()
         switch (choice)
         {
             case 1:
-                system("clear");
+                system("cls");
                 recommendation();
                 break;
             case 2:
-                system("clear");
+                system("cls");
                 browse(user);
                 break;
             case 3:
-                system("clear");
+                system("cls");
                 search();
                 break;
             case 4:
-                system("clear");
+                system("cls");
                 res.dispaly_all();
                 break;
             case 5:
                 exit(0);
                 break;
-            
+
             default:
                 cout << "Invalid Input" << endl;
                 cin.clear();
@@ -54,6 +54,6 @@ void library_member()
                 break;
         }
     }
-    
+
 
 }

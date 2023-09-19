@@ -12,18 +12,18 @@ void search_by_title()
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         getline(cin, title);
-        
-        system("clear");
+
+        system("cls");
         if (title !="0")
         {
             result res2= perform_query("CALL search_books_by_title(\"" + title +  "\")");
-            res2.dispaly_all();  
+            res2.dispaly_all();
             break;
         }
         else
         {
             break;
         }
-            
+
     } while (true);
 }

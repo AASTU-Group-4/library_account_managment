@@ -11,11 +11,11 @@ void browse_gener()
 
         if (cin>>choice)
         {
-            system("clear");
+            system("cls");
             if (choice <= res.num_row && choice >0)
             {
                 result res2= perform_query("CALL get_book_genre(\"" + res.row[choice-1][0] + "\")");
-                res2.dispaly_all();      
+                res2.dispaly_all();
                 break;
             }
             else if(choice==0)
@@ -24,13 +24,13 @@ void browse_gener()
             }
             else
             {
-                system("clear");
+                system("cls");
                 cout << "Invalid Choice" << endl;
             }
         }
         else
         {
-            system("clear");
+            system("cls");
             cout << "Invalid Input" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');

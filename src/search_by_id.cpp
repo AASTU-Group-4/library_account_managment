@@ -10,11 +10,11 @@ void search_by_id()
 
         if(cin >> choice)
         {
-            system("clear");
+            system("cls");
             if (choice > 0)
             {
                 result res2= perform_query("CALL get_book_by_id(" + to_string(choice) + ")");
-                res2.dispaly_all();    
+                res2.dispaly_all();
                 break;
             }
             else if(choice==0)
@@ -23,14 +23,14 @@ void search_by_id()
             }
             else
             {
-                system("clear");
+                system("cls");
                 cout << "Invalid Choice" << endl;
             }
-            
+
         }
         else
         {
-            system("clear");
+            system("cls");
             cout << "Invalid Input" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');

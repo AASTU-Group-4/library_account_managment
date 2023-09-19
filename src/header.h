@@ -1,7 +1,7 @@
 #ifndef LMS
 #define LMS
 
-#include <mysql/mysql.h>
+#include <mysql.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -46,14 +46,14 @@ struct result
                 for (size_t j = 0; j < num_colum; j++)
                 {
                     cout << column[j] << " \t:\t " << row[i][j] << endl;
-                } 
+                }
             }
             cout << "0.back" << endl;
             if (!(cin>>choice))
             {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            }  
+            }
             return true;
         }
         else
@@ -79,7 +79,7 @@ struct result
                 for (size_t j = 0; j < num_colum; j++)
                 {
                     cout << row[i][j] << " ";
-                } 
+                }
                 cout << endl;
             }
             cout << "0.back" << endl;
@@ -104,14 +104,14 @@ struct result
             for (size_t j = 1; j < num_colum; j++)
             {
                 cout << column[j] << " \t:\t " << row[index][j] << endl;
-            } 
+            }
             cout << "0.back" << endl;
             if (!(cin>>choice))
             {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
-             
+
             return true;
         }
         else

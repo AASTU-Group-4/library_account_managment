@@ -12,13 +12,13 @@ int main(int argc, char *argv[])
         switch (choice)
         {
             case 1:
-                system("clear");
+                system("cls");
                 library_member();
                 break;
             case 2:
                 exit(0);
                 break;
-            
+
             default:
                 cout << "Invalid Input" << endl;
                 cin.clear();
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
                 break;
         }
     } while (choice);
-    
-    
+
+
     return 0;
 }

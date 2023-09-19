@@ -5,7 +5,7 @@ void search()
     int choice;
     do
     {
-        system("clear");
+        system("cls");
         cout << "Search by:" <<endl;
         cout << "1. Book ID" << endl;
         cout << "2. Title" << endl;
@@ -14,7 +14,7 @@ void search()
         cout << "0. back" << endl;
         if(cin >> choice)
         {
-            system("clear");
+            system("cls");
 
             if (choice==1)
             {
@@ -31,25 +31,25 @@ void search()
             else if(choice ==4)
             {
                 search_by_author();
-            }   
+            }
             else if(choice ==0)
             {
                 break;
-            }    
+            }
             else
             {
-                system("clear");
+                system("cls");
                 cout << "Invalid Choice" << endl;
-            }     
-            
+            }
+
         }
         else
         {
-            system("clear");
+            system("cls");
             cout << "Invalid Input" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
     } while (true);
-    
+
 }
